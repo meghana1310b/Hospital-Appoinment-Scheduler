@@ -1,0 +1,186 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  box-sizing: border-box;
+}
+.appointment-container
+{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 60vh;
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+.appointment-container img
+{
+  border-radius: 10px;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  background-color: #0b335f;
+}
+.details
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 500px;
+  gap: 10px;
+  text-align: center;
+}
+.p
+{
+  display: flex;
+  gap: 50px;
+}
+.exp
+{
+  border: 1px solid rgb(78, 77, 77);
+  border-radius: 20px;
+  width: 80px;
+  padding: 3px;
+  text-align: center;
+}
+.txt{
+    text-align: left;
+}
+.slots, .availability 
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}  
+.slot-btn, .time-btn 
+{
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.slot-btn:hover, .time-btn:hover {
+  color: white;
+  background-color: #0b335f;
+}
+.slot-btn.selected, .time-btn.selected {
+  background-color: #0b335f;
+  color: white;
+}
+.book-btn {
+  background-color: #28a745; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+.book-btn:hover {
+  background-color: #218838; 
+}
+.popup 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content 
+{
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.popup-actions 
+{
+  margin-top: 20px;
+}
+.confirm-btn, .cancel-btn 
+{
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.confirm-btn 
+{
+  background: green;
+  color: white;
+}
+.cancel-btn 
+{
+  background: red;
+  color: white;
+}
+@media (max-width: 1024px) 
+{
+  .appointment-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .appointment-container img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .details {
+    max-width: 90%;
+  }
+}
+@media (max-width: 768px) 
+{
+  .appointment-container img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .slot-btn, .time-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .book-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+@media (max-width: 480px) 
+{
+  .appointment-container img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .slot-btn, .time-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .book-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+

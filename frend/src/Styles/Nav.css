@@ -1,0 +1,250 @@
+/* body{
+    background-color: #f0f0f0;
+}  */
+.navbar {
+    width: 80%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align content properly */
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    flex-wrap: wrap;
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    margin: 0 auto; 
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+/* Logo and Brand */
+.brand-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between logo and text */
+}
+
+.icon {
+    width: 80px; /* Adjust size if needed */
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Center the navigation items */
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+/* Keep register aligned at the end */
+.navbar .register {
+    margin-left: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a.active::after {
+    width: 100%;
+    background: #2350e4; 
+}
+
+.navbar .admin-btn {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease;
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.navbar .admin-btn::after 
+{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3421c7;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.navbar .admin-btn:hover::after {
+    width: 100%;
+}
+
+.navbar .admin-btn.active::after {
+    width: 100%;
+    background: #2350e4; 
+}
+
+.user-dropdown-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .user-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    object-fit: cover;
+  }
+  
+  .user-initial {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0056b3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+  }
+  
+.dropdown-item:hover 
+{
+    background: #f0f0f0;
+}
+  
+.logout-btn 
+{
+    color: red;
+}
+  
+.user-avatar 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+}
+  
+.user-initial 
+{
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+@media (max-width: 1024px) {
+    .navbar {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+}
+  @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .user-dropdown-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        padding: 10px;
+    }
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .user-dropdown-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
